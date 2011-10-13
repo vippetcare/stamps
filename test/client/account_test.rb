@@ -49,15 +49,15 @@ class AccountTest < Test::Unit::TestCase
       end
 
       should 'return pickup date' do
-        assert '01/29/2011', @carrier_pickup[:pickup_date]
+        assert '01/29/2011', @carrier_pickup[:pickup_date].to_s
       end
 
       should 'return pickup day of the week' do
-        assert 'Saturday', @carrier_pickup[:pick_up_day_of_week]
+        assert 'Saturday', @carrier_pickup[:pick_up_day_of_week].to_s
       end
 
       should 'return a confirmation number' do
-        assert 'WTC7812296', @carrier_pickup[:confirmation_number]
+        assert 'WTC7812296', @carrier_pickup[:confirmation_number].to_s
       end
     end
   end

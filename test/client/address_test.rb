@@ -22,12 +22,12 @@ class AddressTest < Test::Unit::TestCase
       end
 
       should 'return a cleanse hash' do
-        assert 'W9pHbVsNIdYE8/B6SyQ4wOkIIr9kZWFkYmVlZg==20110713', @address[:address][:cleanse_hash]
+        assert 'W9pHbVsNIdYE8/B6SyQ4wOkIIr9kZWFkYmVlZg==20110713', @address[:address][:cleanse_hash].to_s
       end
 
       should 'indicate if the address match' do
-        assert @address[:address_match]
-        assert @address[:city_state_zip_ok]
+        assert @address.key?(:address_match)
+        assert @address.key?(:city_state_zip_ok)
       end
     end
 
